@@ -1,0 +1,527 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+    <meta charset="UTF-8">
+    <title>Статистика стадионов</title>
+</head>
+<body bgcolor="#f4f8fb">
+
+    <!-- Раздел меню -->
+    <h4 align="center">Навигация по сайту:</h4>
+    <p align="center">
+        <a href="lab1.html">Главная страница</a> | 
+        <a href="lab1_page2.html">Подробнее о Маракане</a> | 
+        <b>Статистика стадионов (Таблица)</b>
+    </p>
+    <hr>
+    
+    <h1 align="center">Статистика и анализ стадионов мира</h1>
+    
+    <form>
+        <fieldset>
+            <legend><b>График</b></legend>
+            <p>Значение по оси ОХ (выбрать только одно):<br>
+                <input type="radio" name="axis_x" id="x_type" value="type"> <label for="x_type">Тип</label>
+                <input type="radio" name="axis_x" id="x_country" value="country"> <label for="x_country">Страна</label>
+                <input type="radio" name="axis_x" id="x_year" value="year"> <label for="x_year">Год постройки</label>
+            </p>
+
+            <p>Значение по оси OY (можно выбрать несколько):<br>
+                <input type="checkbox" name="y_max" id="y_max" value="max_cap"> <label for="y_max">Максимальная вместимость</label>
+                <input type="checkbox" name="y_min" id="y_min" value="min_cap"> <label for="y_min">Минимальная вместимость</label>
+                <input type="checkbox" name="y_count" id="y_count" value="count"> <label for="y_count">Количество сооружений(среднее)</label>
+            </p>
+            <input type="button" value="Построить график">
+        </fieldset>
+        <br>
+
+        <fieldset>
+            <legend><b>Фильтры</b></legend>
+            <p>
+                <label for="f_name">Название стадиона: </label>
+                <input type="text" id="f_name" name="f_name">
+            </p>
+            <p>
+                <label for="f_country">Страна: </label>
+                <input type="text" id="f_country" name="f_country">
+            </p>
+            <p>
+                <label for="f_city">Город: </label>
+                <input type="text" id="f_city" name="f_city">
+            </p>
+            <p>Год постройки:
+                <label for="year_from">ОТ</label> 
+                <input type="number" id="year_from" name="year_from" min="1800" max="2024">
+                <label for="year_to">ДО</label> 
+                <input type="number" id="year_to" name="year_to" min="1800" max="2024">
+            </p>
+            <p>Вместимость:
+                <label for="num_from">ОТ</label> 
+                <input type="number" id="num_from" name="num_from" min="10000" max="150000">
+                <label for="num_to">ДО</label> 
+                <input type="number" id="num_to" name="num_to" min="10000" max="150000">
+            </p>
+            <input type="button" value="Применить фильтры">
+        </fieldset>
+        <br>
+
+        <fieldset>
+            <legend><b>Сортировка</b></legend>
+            <p>Первый уровень:
+                <select name="sort1" id="sort1">
+                    <option value="none">Нет</option>
+                    <option value="name">Название</option>
+                    <option value="country">Страна</option>
+                    <option value="year">Год постройки</option>
+                    <option value="cap">Вместимость</option>
+                </select> 
+                <input type="checkbox" name="desc1" id="desc1">
+                <label for="desc1">По убыванию</label>
+            </p>
+            <p>Второй уровень:
+                <select name="sort1" id="sort1">
+                    <option value="none">Нет</option>
+                    <option value="name">Название</option>
+                    <option value="country">Страна</option>
+                    <option value="year">Год постройки</option>
+                    <option value="cap">Вместимость</option>
+                </select> 
+                <input type="checkbox" name="desc1" id="desc1">
+                <label for="desc1">По убыванию</label>
+            </p>
+            <p>Третий уровень:
+                <select name="sort1" id="sort1">
+                    <option value="none">Нет</option>
+                    <option value="name">Название</option>
+                    <option value="country">Страна</option>
+                    <option value="year">Год постройки</option>
+                    <option value="cap">Вместимость</option>
+                </select> 
+                <input type="checkbox" name="desc1" id="desc1">
+                <label for="desc1">По убыванию</label>
+            </p>
+            <input type="submit" value="Сортировать">
+        </fieldset>
+    </form>
+
+    <br>
+    
+    <!-- ТАБЛИЦА С ДАННЫМИ -->
+    <table border="1" width="100%" cellpadding="5" cellspacing="0" bgcolor="#ffffff">
+        <tr bgcolor="#d0e4f5">
+            <th>№</th>
+            <th>Название</th>
+            <th>Страна</th>
+            <th>Город</th>
+            <th>Год постройки</th>
+            <th>Вместимость (чел.)</th>
+        </tr>
+        <tr>
+            <td align="center">1</td>
+            <td>Маракана</td>
+            <td>Бразилия</td>
+            <td>Рио-де-Жанейро</td>
+            <td align="center">1950</td>
+            <td align="right">78838</td>
+        </tr>
+        <tr>
+            <td align="center">2</td>
+            <td>Уэмбли</td>
+            <td>Англия</td>
+            <td>Лондон</td>
+            <td align="center">2007</td>
+            <td align="right">90000</td>
+        </tr>
+        <tr>
+            <td align="center">3</td>
+            <td>Камп Ноу</td>
+            <td>Испания</td>
+            <td>Барселона</td>
+            <td align="center">1957</td>
+            <td align="right">99354</td>
+        </tr>
+        <tr>
+            <td align="center">4</td>
+            <td>Лужники</td>
+            <td>Россия</td>
+            <td>Москва</td>
+            <td align="center">1956</td>
+            <td align="right">81000</td>
+        </tr>
+        <tr>
+            <td align="center">5</td>
+            <td>Сантьяго Бернабеу</td>
+            <td>Испания</td>
+            <td>Мадрид</td>
+            <td align="center">1947</td>
+            <td align="right">81044</td>
+        </tr>
+        <tr>
+            <td align="center">6</td>
+            <td>Стадион Первого мая</td>
+            <td>КНДР</td>
+            <td>Пхеньян</td>
+            <td align="center">1989</td>
+            <td align="right">114000</td>
+        </tr>
+        <tr>
+            <td align="center">7</td>
+            <td>Мельбурн Крикет Граунд</td>
+            <td>Австралия</td>
+            <td>Мельбурн</td>
+            <td align="center">1854</td>
+            <td align="right">100024</td>
+        </tr>
+        <tr>
+            <td align="center">8</td>
+            <td>Соккер Сити</td>
+            <td>ЮАР</td>
+            <td>Йоханнесбург</td>
+            <td align="center">1989</td>
+            <td align="right">94736</td>
+        </tr>
+        <tr>
+            <td align="center">9</td>
+            <td>Роуз Боул</td>
+            <td>США</td>
+            <td>Пасадина</td>
+            <td align="center">1922</td>
+            <td align="right">92542</td>
+        </tr>
+        <tr>
+            <td align="center">10</td>
+            <td>Ацтека</td>
+            <td>Мексика</td>
+            <td>Мехико</td>
+            <td align="center">1966</td>
+            <td align="right">87523</td>
+        </tr>
+        <tr>
+            <td align="center">11</td>
+            <td>Букит Джалил</td>
+            <td>Малайзия</td>
+            <td>Куала-Лумпур</td>
+            <td align="center">1998</td>
+            <td align="right">87411</td>
+        </tr>
+        <tr>
+            <td align="center">12</td>
+            <td>Борг-эль-Араб</td>
+            <td>Египет</td>
+            <td>Александрия</td>
+            <td align="center">2007</td>
+            <td align="right">86000</td>
+        </tr>
+        <tr>
+            <td align="center">13</td>
+            <td>Солт-Лейк-Стадиум</td>
+            <td>Индия</td>
+            <td>Калькутта</td>
+            <td align="center">1984</td>
+            <td align="right">85000</td>
+        </tr>
+        <tr>
+            <td align="center">14</td>
+            <td>Монументаль</td>
+            <td>Аргентина</td>
+            <td>Буэнос-Айрес</td>
+            <td align="center">1938</td>
+            <td align="right">84567</td>
+        </tr>
+        <tr>
+            <td align="center">15</td>
+            <td>Стад де Франс</td>
+            <td>Франция</td>
+            <td>Сен-Дени</td>
+            <td align="center">1998</td>
+            <td align="right">81338</td>
+        </tr>
+        <tr>
+            <td align="center">16</td>
+            <td>Сигнал Идуна Парк</td>
+            <td>Германия</td>
+            <td>Дортмунд</td>
+            <td align="center">1974</td>
+            <td align="right">81365</td>
+        </tr>
+        <tr>
+            <td align="center">17</td>
+            <td>Сан-Сиро</td>
+            <td>Италия</td>
+            <td>Милан</td>
+            <td align="center">1926</td>
+            <td align="right">80018</td>
+        </tr>
+        <tr>
+            <td align="center">18</td>
+            <td>Олимпийский стадион Гуандуна</td>
+            <td>Китай</td>
+            <td>Гуанчжоу</td>
+            <td align="center">2001</td>
+            <td align="right">80012</td>
+        </tr>
+        <tr>
+            <td align="center">19</td>
+            <td>Альянц Арена</td>
+            <td>Германия</td>
+            <td>Мюнхен</td>
+            <td align="center">2005</td>
+            <td align="right">75024</td>
+        </tr>
+        <tr>
+            <td align="center">20</td>
+            <td>Олимпийский стадион Ататюрка</td>
+            <td>Турция</td>
+            <td>Стамбул</td>
+            <td align="center">2002</td>
+            <td align="right">74753</td>
+        </tr>
+        <tr>
+            <td align="center">21</td>
+            <td>Миллениум</td>
+            <td>Уэльс</td>
+            <td>Кардифф</td>
+            <td align="center">1999</td>
+            <td align="right">74500</td>
+        </tr>
+        <tr>
+            <td align="center">22</td>
+            <td>Олимпиаштадион</td>
+            <td>Германия</td>
+            <td>Берлин</td>
+            <td align="center">1936</td>
+            <td align="right">74475</td>
+        </tr>
+        <tr>
+            <td align="center">23</td>
+            <td>Олд Траффорд</td>
+            <td>Англия</td>
+            <td>Манчестер</td>
+            <td align="center">1910</td>
+            <td align="right">74310</td>
+        </tr>
+        <tr>
+            <td align="center">24</td>
+            <td>Олимпико</td>
+            <td>Италия</td>
+            <td>Рим</td>
+            <td align="center">1937</td>
+            <td align="right">70634</td>
+        </tr>
+        <tr>
+            <td align="center">25</td>
+            <td>НСК Олимпийский</td>
+            <td>Украина</td>
+            <td>Киев</td>
+            <td align="center">1923</td>
+            <td align="right">70050</td>
+        </tr>
+        <tr>
+            <td align="center">26</td>
+            <td>Бакинский олимпийский стадион</td>
+            <td>Азербайджан</td>
+            <td>Баку</td>
+            <td align="center">2015</td>
+            <td align="right">69870</td>
+        </tr>
+        <tr>
+            <td align="center">27</td>
+            <td>Ванда Метрополитано</td>
+            <td>Испания</td>
+            <td>Мадрид</td>
+            <td align="center">2017</td>
+            <td align="right">68456</td>
+        </tr>
+        <tr>
+            <td align="center">28</td>
+            <td>Газпром Арена</td>
+            <td>Россия</td>
+            <td>Санкт-Петербург</td>
+            <td align="center">2017</td>
+            <td align="right">68000</td>
+        </tr>
+        <tr>
+            <td align="center">29</td>
+            <td>Велодром</td>
+            <td>Франция</td>
+            <td>Марсель</td>
+            <td align="center">1937</td>
+            <td align="right">67394</td>
+        </tr>
+        <tr>
+            <td align="center">30</td>
+            <td>Пушкаш Арена</td>
+            <td>Венгрия</td>
+            <td>Будапешт</td>
+            <td align="center">2019</td>
+            <td align="right">67215</td>
+        </tr>
+        <tr>
+            <td align="center">31</td>
+            <td>Эштадиу да Луш</td>
+            <td>Португалия</td>
+            <td>Лиссабон</td>
+            <td align="center">2003</td>
+            <td align="right">64642</td>
+        </tr>
+        <tr>
+            <td align="center">32</td>
+            <td>Тоттенхэм Хотспур</td>
+            <td>Англия</td>
+            <td>Лондон</td>
+            <td align="center">2019</td>
+            <td align="right">62850</td>
+        </tr>
+        <tr>
+            <td align="center">33</td>
+            <td>Энфилд</td>
+            <td>Англия</td>
+            <td>Ливерпуль</td>
+            <td align="center">1884</td>
+            <td align="right">61276</td>
+        </tr>
+        <tr>
+            <td align="center">34</td>
+            <td>Бенито Вильямарин</td>
+            <td>Испания</td>
+            <td>Севилья</td>
+            <td align="center">1929</td>
+            <td align="right">60721</td>
+        </tr>
+        <tr>
+            <td align="center">35</td>
+            <td>Эмирейтс</td>
+            <td>Англия</td>
+            <td>Лондон</td>
+            <td align="center">2006</td>
+            <td align="right">60704</td>
+        </tr>
+        <tr>
+            <td align="center">36</td>
+            <td>Селтик Парк</td>
+            <td>Шотландия</td>
+            <td>Глазго</td>
+            <td align="center">1892</td>
+            <td align="right">60411</td>
+        </tr>
+        <tr>
+            <td align="center">37</td>
+            <td>Сентенарио</td>
+            <td>Уругвай</td>
+            <td>Монтевидео</td>
+            <td align="center">1930</td>
+            <td align="right">60235</td>
+        </tr>
+        <tr>
+            <td align="center">38</td>
+            <td>Парк Олимпик Лион</td>
+            <td>Франция</td>
+            <td>Лион</td>
+            <td align="center">2016</td>
+            <td align="right">59186</td>
+        </tr>
+        <tr>
+            <td align="center">39</td>
+            <td>Национальный стадион</td>
+            <td>Польша</td>
+            <td>Варшава</td>
+            <td align="center">2012</td>
+            <td align="right">58580</td>
+        </tr>
+        <tr>
+            <td align="center">40</td>
+            <td>Арена Националэ</td>
+            <td>Румыния</td>
+            <td>Бухарест</td>
+            <td align="center">2011</td>
+            <td align="right">55634</td>
+        </tr>
+        <tr>
+            <td align="center">41</td>
+            <td>Йохан Кройф Арена</td>
+            <td>Нидерланды</td>
+            <td>Амстердам</td>
+            <td align="center">1996</td>
+            <td align="right">55500</td>
+        </tr>
+        <tr>
+            <td align="center">42</td>
+            <td>Диего Армандо Марадона</td>
+            <td>Италия</td>
+            <td>Неаполь</td>
+            <td align="center">1959</td>
+            <td align="right">54726</td>
+        </tr>
+        <tr>
+            <td align="center">43</td>
+            <td>Райко Митич</td>
+            <td>Сербия</td>
+            <td>Белград</td>
+            <td align="center">1963</td>
+            <td align="right">53000</td>
+        </tr>
+        <tr>
+            <td align="center">44</td>
+            <td>Али Сами Ен</td>
+            <td>Турция</td>
+            <td>Стамбул</td>
+            <td align="center">2011</td>
+            <td align="right">52223</td>
+        </tr>
+        <tr>
+            <td align="center">45</td>
+            <td>Хэмпден Парк</td>
+            <td>Шотландия</td>
+            <td>Глазго</td>
+            <td align="center">1903</td>
+            <td align="right">51866</td>
+        </tr>
+        <tr>
+            <td align="center">46</td>
+            <td>Авива</td>
+            <td>Ирландия</td>
+            <td>Дублин</td>
+            <td align="center">2010</td>
+            <td align="right">51700</td>
+        </tr>
+        <tr>
+            <td align="center">47</td>
+            <td>Драгау</td>
+            <td>Португалия</td>
+            <td>Порту</td>
+            <td align="center">2003</td>
+            <td align="right">50033</td>
+        </tr>
+        <tr>
+            <td align="center">48</td>
+            <td>Месталья</td>
+            <td>Испания</td>
+            <td>Валенсия</td>
+            <td align="center">1923</td>
+            <td align="right">49430</td>
+        </tr>
+        <tr>
+            <td align="center">49</td>
+            <td>Парк де Пренс</td>
+            <td>Франция</td>
+            <td>Париж</td>
+            <td align="center">1972</td>
+            <td align="right">47929</td>
+        </tr>
+        <tr>
+            <td align="center">50</td>
+            <td>Фишт</td>
+            <td>Россия</td>
+            <td>Сочи</td>
+            <td align="center">2013</td>
+            <td align="right">47659</td>
+        </tr>
+    </table>
+
+    <hr>
+    <p align="right">
+        <font color="gray"><i>Выполнила: Рагулина Диана Сергеевна, Группа: Б9124-09.03.04(4)</i></font>
+    </p>
+
+</body>
+</html>
