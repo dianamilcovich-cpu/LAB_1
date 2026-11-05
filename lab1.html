@@ -1,61 +1,137 @@
 <!DOCTYPE html>
 <html lang="ru">
+
 <head>
     <meta charset="UTF-8">
     <title>Мой первый сайт</title>
+    <link rel="stylesheet" href="lab_1.css">
 </head>
-<body bgcolor="#f4f8fb">
 
-    <h4>Навигация по сайту:</h4>
-    <p>
-        Главная страница |
-        <a href="lab1_page2.html">Подробнее о Маракане</a> | 
-        <a href="lab1_page3.html">Список стадионов (Таблица)</a>
-    </p>
-    <hr>
+<body>
+    <header>
 
-    <h1 align="center">Легендарные спортивные стадионы</h1>
-    <p>
-        <strong><i>Галерея великих арен</i></strong>
-    </p>
-    <p>
-        <img src="picture/Wembley.jpeg" alt="Уэмбли" width="300" height="250">
-        <img src="picture/Camp_Nou.jpeg" alt="Кэмп Ноу" width="300" height="250">
-        <img src="picture/marakana.jpg" alt="Маракана" width="300" height="250">
-        <img src="picture/luzhniki.jpg" alt="Лужники" width="300" height="250">
-    </p>
-    <hr>
+        <div class="top-bar">
+            Легендарные спортивные стадионы
+        </div>
+        <div class="nav-bar"><a href="#" class="nav-btn active">Главная страница</a><a href="lab1_page2.html"
+                class="nav-btn">Подробнее о Маракане</a><a href="lab1_page3.html" class="nav-btn">Список стадионов
+                (Таблица)</a>
+        </div>
+    </header>
 
-    <h3 align="left">Уэмбли (Лондон, Англия)</h3>
-    <p>
-        <img src="picture/wembley1.jpg" alt="Уэмбли" width="300" height="300" align="left" hspace="15" vspace="5">
-        Один из самых известных стадионов мира, открытый в 2007 году на месте старого «Уэмбли». Второе по вместимости спортивное сооружение в Европе (90 000 зрителей). Стадион увенчан знаменитой аркой высотой 134 метра, которая поддерживает вес крыши и является визуальной доминантой комплекса.
-        <br>Здесь проводятся финалы Кубка Англии, домашние матчи сборной Англии по футболу, а также крупнейшие музыкальные концерты. Строительство нового стадиона обошлось примерно в 798 миллионов фунтов стерлингов.
-    </p>
-    <br clear="all">
-    <hr>
-     
-    <h3 align="left">Камп Ноу (Барселона, Испания)</h3>
-    <p>
-        <img src="picture/camp_now1.jpg" alt="Кэмп Ноу" width="300" height="300" align="right" hspace="15" vspace="5">
-        Самый большой по вместимости стадион не только в Испании, но и во всей Европе (вмещает 99 354 зрителей). Был открыт в 1957 году. Домашний стадион футбольного клуба «Барселона».
-        <br>Арена принимала матчи чемпионата Европы и мира по футболу, а также олимпийский футбольный турнир 1992 года. Внутри стадиона функционирует один из самых посещаемых музеев Каталонии — музей ФК «Барселона».
-    </p>
-    <br clear="all"> 
-    <hr>   
+    <main>
+        <div class="gallery">
+            <div class="gallery-left">
+                <div class="gallery-top">
+                    <img src="picture/Wembley.jpeg" alt="Уэмбли">
+                </div>
+                <div class="gallery-bottom">
+                    <div class="gallery-bottom-1">
+                        <img src="picture/Camp_Nou.jpeg" alt="Кэмп Ноу">
+                    </div>
+                    <div class="gallery-bottom-2">
+                        <img src="picture/marakana.jpg" alt="Маракана">
+                    </div>
+                </div>
+            </div>
+            <div class="gallery-right">
+                <img src="picture/luzhniki.jpg" alt="Лужники">
+            </div>
+        </div>
 
-    <details>
-        <summary>Интересные факты о стадионах</summary>
-        <ul>
-            <li>Стадион «Уэмбли» был построен в 1923 году и стал символом английского футбола.</li>
-            <li>«Камп Ноу» является домом для одного из самых успешных футбольных клубов в мире — ФК «Барселона».</li>
-            <li>Стадион «Маракана» в Рио-де-Жанейро принимал финалы чемпионатов мира по футболу в 1950 и 2014 годах.</li>
-            <li>«Лужники» в Москве были реконструированы к чемпионату мира по футболу 2018 года и могут вместить более 80 000 зрителей.</li>
-        </ul>
-    </details>
-    <hr>
+        <div class="cards-container">
+            <div class="card top-card top-card-left">
+                <div class="card-img-container">
+                    <img src="picture/wembley1.jpg" alt="Уэмбли">
+                </div>
+                <div class="card-text-container">
+                    <b>Уэмбли</b><br>
+                    Построен в 1923 году и стал символом английского футбола.
+                </div>
+            </div>
+            <div class="top-center-cards">
+                <div class="card top-center-card center-card-left">
+                    <div class="card-img-container">
+                        <img src="picture/camp_now1.jpg" alt="Кэмп Ноу">
+                    </div>
+                    <div class="card-text-container">
+                        <b>Камп Ноу</b><br>
+                        Дом для успешных клубов — ФК «Барселона».
+                    </div>
+                </div>
 
-    <p align="right" text="grey"><i>Выполнила: Рагулина Диана Сергеевна, Группа: Б9124-09.03.04(4)</i></p>
+                <div class="card top-center-card center-card-right">
+                    <div class="card-img-container">
+                        <img src="picture/marakana.jpg" alt="Маракана">
+                    </div>
+                    <div class="card-text-container">
+                        <b>Маракана</b><br>
+                        Принимала финалы чемпионатов мира 1950 и 2014 годов.
+                    </div>
+                </div>
+            </div>
+            <div class="card top-card top-card-right">
+                <div class="card-img-container">
+                    <img src="picture/luzhniki.jpg" alt="Лужники">
+                </div>
+                <div class="card-text-container">
+                    <b>Лужники</b><br>
+                    Реконструированы к ЧМ-2018, вмещают 80 000 зрителей.
+                </div>
+            </div>
+
+        </div>
+
+        <div class="bottom-container">
+
+            <div class="card bottom-card bottom-card-left">
+                <div class="card-img-container">
+                    <img src="picture/nirenda.jpeg" alt="Нарендры Моди">
+                </div>
+                <div class="card-text-container">
+                    <b>Нарендры Моди (Ахмедабад, Индия)</b><br>
+                    Наибольший стадион в мире на сегодняшний день, вмещающий 132 000 зрителей.
+                </div>
+            </div>
+
+
+            <div class="bottom-center-article">
+                <div class="pink-white-box">
+                    <img src="picture/marakana.jpg" alt="Маракана">
+                </div>
+                <h3>Маракана (Рио-де-Жанейро)</h3>
+                <p>Легендарный бразильский стадион, который принимал финалы чемпионатов мира по футболу в 1950 и 2014
+                    годах.
+                    Настоящий символ мирового футбола и одна из самых известных спортивных арен на планете.
+                    Официальное название арены — «Мариу Филью», но весь мир знает её под именем района Рио-де-Жанейро,
+                    где она расположена.</p>
+                <p>В 1950 году на решающем матче здесь собралось почти 200 тысяч зрителей, что до сих пор остаётся
+                    абсолютным рекордом в истории футбола.
+                    Сегодня, после масштабной реконструкции, стадион стал более современным и комфортным, вмещая около
+                    78 тысяч болельщиков.
+                    Арена принимает не только важнейшие спортивные события, но и грандиозные музыкальные концерты.</p>
+                <div class="details"><a href="lab1_page2.html" class="btn-blue-small">Подробнее»</a></div>
+            </div>
+
+
+            <div class="card bottom-card bottom-card-right">
+                <div class="card-img-container">
+                    <img src="picture/1may.jpeg" alt="Стадион Первого мая">
+                </div>
+                <div class="card-text-container">
+                    <b>Стадион Первого мая (Пхеньян, КНДР)</b><br>
+                    Колоссальное сооружение, которое очень долгое время считалось абсолютным лидером.
+                </div>
+            </div>
+
+        </div>
+    </main>
+    <footer>
+        <div class="footer-bottom">
+            <p>Выполнила: Рагулина Диана Сергеевна, Группа: Б9124-09.03.04(4)</p>
+        </div>
+    </footer>
 
 </body>
+
 </html>
